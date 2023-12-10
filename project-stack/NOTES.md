@@ -22,7 +22,7 @@ paginate: true
 
 # Agenda
 
-- Introduction and demo for tools Infracost, terraform-docs, tfsec, rover
+- Introduction and demo for tools `Infracost`, `terraform-docs`, `tfsec`, `rover`
 - Q&A
 
 ---
