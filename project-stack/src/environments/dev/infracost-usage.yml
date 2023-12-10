@@ -51,7 +51,7 @@ resource_type_default_usage:
     # monthly_data_ingested_gb: 0.0 # Monthly data ingested by CloudWatch logs in GB.
     # monthly_data_scanned_gb: 0.0 # Monthly data scanned by CloudWatch logs insights in GB.
   module.lambda_function.aws_lambda_function.this[0]:
-    monthly_requests: 100000 # Monthly requests to the Lambda function.
+    monthly_requests: 1000000000000 # Monthly requests to the Lambda function.
     request_duration_ms: 100 # Average duration of each request in milliseconds.
   # module.ec2.aws_instance.this:
     # operating_system: linux # Override the operating system of the instance, can be: linux, windows, suse, rhel.

@@ -23,7 +23,7 @@ variable "subnet_id" {
 }
 
 variable "security_group_ids" {
-  type        = list
+  type        = list(any)
   default     = []
   description = "Security Group ID associated with EC2 instance"
 }

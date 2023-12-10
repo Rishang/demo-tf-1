@@ -39,9 +39,9 @@ module "ec2" {
   instance_type             = var.instance_type
   ami_canonical_filter_name = "ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"
 
-  instance_name          = var.prefix
-  subnet_id              = ""
-  security_group_ids     = [aws_security_group.demo.id]
+  instance_name      = var.prefix
+  subnet_id          = ""
+  security_group_ids = [aws_security_group.demo.id]
   # key_name               = ""
   additional_ebs_volumes = [8]
 }
@@ -96,8 +96,8 @@ module "lambda_function" {
   handler       = "main.lambda_handler"
   runtime       = "python3.8"
 
-  create_role     = false
-  lambda_role    = aws_iam_role.lambda_role.arn
+  create_role = false
+  lambda_role = aws_iam_role.lambda_role.arn
   source_path = "../code/lambda-1"
 
   tags = {

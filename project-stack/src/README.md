@@ -1,6 +1,8 @@
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.30.0 |
 
 ## Providers
 
@@ -19,9 +21,11 @@ No requirements.
 
 | Name | Type |
 |------|------|
-| [aws_security_group.demo](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
-| [aws_subnet_ids.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/subnet_ids) | data source |
-| [aws_vpc.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/vpc) | data source |
+| [aws_iam_role.lambda_role](https://registry.terraform.io/providers/hashicorp/aws/5.30.0/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy.lambda_policy](https://registry.terraform.io/providers/hashicorp/aws/5.30.0/docs/resources/iam_role_policy) | resource |
+| [aws_security_group.demo](https://registry.terraform.io/providers/hashicorp/aws/5.30.0/docs/resources/security_group) | resource |
+| [aws_subnets.default](https://registry.terraform.io/providers/hashicorp/aws/5.30.0/docs/data-sources/subnets) | data source |
+| [aws_vpc.default](https://registry.terraform.io/providers/hashicorp/aws/5.30.0/docs/data-sources/vpc) | data source |
 
 ## Inputs
 
