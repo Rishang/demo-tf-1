@@ -1,0 +1,15 @@
+# docs: 
+# - https://www.infracost.io/docs/features/config_file/
+# - https://www.infracost.io/docs/features/usage_based_resources/
+version: 0.1
+projects:
+  - path: ./src
+    name: dev
+    terraform_var_files:
+      - environments/dev/terraform.tfvars
+    usage_file: ./src/environments/dev/infracost-usage.yml
+  - path: ./src
+    name: prod
+    terraform_var_files:
+      - environments/prod/terraform.tfvars
+    usage_file: ./src/environments/prod/infracost-usage.yml
