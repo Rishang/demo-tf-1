@@ -13,6 +13,21 @@ data "aws_ami" "ubuntu" {
 
   owners = ["099720109477"] # Canonical
 }
+locals {
+  mum_alfa_map = {
+    "0": "a",
+    "1": "b",
+    "2": "c",
+    "3": "d",
+    "4": "e",
+    "5": "f",
+    "6": "g",
+    "7": "h",
+    "8": "i",
+    "9": "j",
+    "10": "k",
+  }
+}
 
 resource "aws_instance" "this" {
   ami                         = data.aws_ami.ubuntu.id
@@ -44,7 +59,7 @@ resource "aws_ebs_volume" "extra_volume" {
 
 resource "aws_volume_attachment" "extra_volume" {
   count       = length(var.additional_ebs_volumes)
-  device_name = "/dev/sdb${count.index}"
+  device_name = "/dev/xvdb${local.mum_alfa_map[tostring(count.index)]}"
   volume_id   = aws_ebs_volume.extra_volume[count.index].id
   instance_id = aws_instance.this.id
 }
